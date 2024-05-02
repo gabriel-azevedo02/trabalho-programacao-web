@@ -1,0 +1,30 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h2{
+    text-align: center;
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 240px;
+}
+
+.grid{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+.celula{
+    width: 75px;
+    height: 65px;
+    font-size: 30pt;
+    margin: 4px 2px;
+    font-weight: 300;
+    padding-top: 10px ;
+    border-radius: 3px;
+    text-align: center;
+    background-color: blue;
+}
