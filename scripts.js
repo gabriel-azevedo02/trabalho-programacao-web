@@ -1,6 +1,6 @@
 const celulas = document.querySelectorAll(".celula");
 let checarVez = true;
-let checarVez = true;
+
 
 const JOGADOR_X = "X";
 const JOGADOR_O = "O";
