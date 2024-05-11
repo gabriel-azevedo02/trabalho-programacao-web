@@ -85,3 +85,24 @@ function endGame(vencedor = null) {
 
     setTimeout(() => location.reload(), 4000);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    let botaoAceitaMensagem = document.getElementById("botao-aceita-mensagem");
+    let containerMensagem = document.getElementById("container-mensagem-usuario");
+
+    botaoAceitaMensagem.addEventListener("click", function () {
+        aceitaMensagem(containerMensagem);
+        containerMensagem.parentNode.removeChild(containerMensagem); // Remove o contêiner após clicar
+    });
+
+    if (localStorage.getItem("aceitouCookie") == "1") {
+        aceitaMensagem(containerMensagem);
+        containerMensagem.parentNode.removeChild(containerMensagem); // Remove o contêiner se já tiver aceitado anteriormente
+    }
+});
+
+function aceitaMensagem(container) {
+    container.classList.add("oculto");
+    localStorage.setItem("aceitouCookie", "1");
+}
+
